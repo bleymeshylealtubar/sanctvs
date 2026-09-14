@@ -1,0 +1,840 @@
+:root{
+    --deep-yellow: rgb(255,200,0);
+    --moderate-yellow: rgb(255,200,50);
+    --shallow-yellow: rgb(255,200,100);
+    --deep-gray: rgb(100,100,100);
+    --moderate-gray: rgb(150,150,150);
+    --shallow-gray: rgb(200,200,200);
+    --latin-font: 'Times New Roman',Times,sans-serif;
+    --crosses: url('../assets/others/catholic-crosses.png');
+}
+
+body{
+    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+body.loaded{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    visibility: visible;
+}
+a{
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+button:hover{
+    border-color: #ffffff !important;
+    color: #ffffff;
+    cursor: pointer;
+}
+footer{
+    align-items: center;
+    background-color: var(--moderate-yellow);
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    height: 10vh;
+    justify-content: space-evenly;
+    position: sticky;
+    bottom: 0;
+}
+
+@media screen and (max-width: 1920px){
+    .inscribe-te,.adscribe-te,.mvtare-tesseram,
+    #adscriptvs,#inscriptvs,#mvtatvs,
+    #exire,#delehere,#rescindereOrdinem,
+    #perficereOrdinem{
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+    }
+    .inscribe-te,.adscribe-te,.mvtare-tesseram{
+        background-color: var(--shallow-yellow);
+        background-image: var(--crosses);
+    }
+    #adscriptvs,#inscriptvs,#mvtatvs,#exire,#delehere,
+    #rescindereOrdinem,#perficereOrdinem{
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .inscribe-te form,.adscribe-te form,.mvtare-tesseram form,
+    .sign-up,.log-in,.change,#exire>div,#delehere>div,
+    #rescindereOrdinem form,#perficereOrdinem form{
+        background-color: var(--moderate-yellow);
+        border-radius: 25px;
+        box-shadow: 10px 10px 5px 0 var(--moderate-gray);
+        display: grid;
+        font-size: 18px;
+        padding: 25px;
+        place-items: center;
+        width: 25%;
+    }
+    .inscribe-te form,.adscribe-te form,.mvtare-tesseram form{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+    .inscribe-te div,.adscribe-te div,.mvtare-tesseram div{
+        display: grid;
+        place-items: center;
+        width: 100%;
+    }
+    #exire>div,#delehere>div,
+    #rescindereOrdinem form,
+    #perficereOrdinem form{
+        animation: incrementvm-capessere 0.25s ease-in-out;
+        width: 35%;
+    }
+    .confirmare{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .inscribe-te input,.inscribe-te button,
+    .adscribe-te input,.adscribe-te button,
+    .mvtare-tesseram input,.mvtare-tesseram button,
+    #adscriptvs button,#inscriptvs button,
+    #mvtatvs button,.confirmare button,
+    .praecepta button,.qvaere input,
+    .qvaere button{
+        border-radius: 10px;
+        font-family: var(--latin-font);
+        font-size: 18px;
+        margin-block: 5px;
+        padding: 10px;
+    }
+    .inscribe-te input,.adscribe-te input,
+    .mvtare-tesseram input{
+        width: 75%;
+    }
+    .qvaere input{
+        width: 25%;
+    }
+    .inscribe-te button,.adscribe-te button,
+    .mvtare-tesseram button,#adscriptvs button,
+    #inscriptvs button,#mvtatvs button,
+    .praecepta button,.qvaere button{
+        background-color: var(--deep-yellow);
+        border: 2pt solid #000000;
+        font-weight: bold;
+        width: 80%;
+    }
+    .confirmare button{
+        border: 2pt solid #000000;
+        font-weight: bold;
+        width: 45%;
+    }
+    .confirmare button:first-of-type{
+        background-color: var(--deep-yellow);
+    }
+    .confirmare button:last-of-type{
+        background-color: var(--shallow-yellow);
+    }
+    .praecepta button{
+        width: 100%;
+    }
+    .qvaere button{
+        margin-left: 10px;
+        width: 10%;
+    }
+
+    .transversvs,.horizontal{
+        background-color: var(--moderate-yellow);
+        align-items: center;
+        display: flex;
+        font-size: 18px;
+        height: 20vh;
+        justify-content: space-evenly;
+        position: sticky;
+        top: 0;
+    }
+    .salvtatio,.definitio,.notitia,.mercimonia,
+    .exercitivm,.orders{
+        align-items: center;
+        background-color: var(--shallow-yellow);
+        background-image: var(--crosses);
+        display: flex;
+        font-size: 18px;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
+    }
+    .salvtatio,.definitio,.notitia{
+        height: 80vh;
+    }
+    .salvtatio button,.negotivm button,
+    .clavis button{
+        background-color: transparent;
+        border-style: none;
+    }
+    .orders{
+        bottom: 10vh;
+        height: 70vh;
+        overflow-y: scroll;
+        position: sticky;
+        top: 20vh;
+    }
+    .orders>div{
+        height: 70vh;
+        width: 75%;
+    }
+    .orders p{
+        width: 15%;
+    }
+    .mercimonia,.exercitivm{
+        height: 120vh;
+    }
+    .pax-tecvm,.qvid-svnt-sancti,
+    .prospectvs{
+        place-items: center;
+        text-align: justify;
+        width: 25%;
+    }
+    .sancti{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .sancti img,.imagines img,.statvae img,
+    .accessoria img{
+        border: 2pt solid #ffffff;
+        border-radius: 10px;
+    }
+    .statvae img,.accessoria img{
+        background-color: var(--deep-yellow);
+    }
+    .notitia div{
+        place-items: center;
+    }
+    .scientia{
+        align-items: center;
+        display: flex !important;
+        justify-content: space-evenly;
+        width: 75%;
+    }
+    .scientia div{
+        background-color: var(--deep-yellow);
+        border: 2pt solid #000000;
+        border-radius: 25px;
+        box-shadow: 10px 10px 5px 0 var(--moderate-gray);
+        padding: 25px;
+        text-align: justify;
+        width: 25%;
+    }
+    .mercimonia div,.exercitivm div{
+        place-items: center;
+    }
+    .classes{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 75%;
+    }
+    .classes>div{
+        text-align: justify;
+        width: 25%;
+    }
+    .imagines,.statvae,.accessoria{
+        display: grid;
+        grid-template-columns: auto auto;
+        place-items: center;
+    }
+    .praecepta{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 75%;
+    }
+    .praecepta div{
+        background-color: var(--moderate-yellow);
+        border: 2pt solid #000000;
+        border-radius: 25px;
+        box-shadow: 10px 10px 5px 0 var(--moderate-gray);
+        padding: 25px;
+        text-align: justify;
+        width: 75%;
+    }
+    #index{
+        align-items: end;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        height: 100vh;
+        justify-content: end;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    #index>div{
+        animation: labi-ad-sinistram 0.5s ease-in-out;
+        background-color: var(--moderate-yellow);
+        display: grid;
+        font-size: 18px;
+        height: 100vh;
+        width: 20%;
+    }
+    .profilvm-vsoris{
+        display: grid;
+        height: 50vh;
+        padding-block: 25px;
+        place-items: center;
+    }
+    .profilvm-vsoris img,.directvs img{
+        border: 2pt solid #ffffff;
+        border-radius: 50%;
+    }
+    
+    .divisio{
+        background-color: var(--deep-yellow);
+        height: 10vh;
+        width: 100%;
+    }
+
+    .qvaere{
+        align-items: center;
+        background-color: var(--moderate-yellow);
+        display: flex;
+        height: 10vh;
+        justify-content: center;
+        position: sticky;
+        top: 20vh;
+        width: 100%;
+    }
+    .occidentalis,.orientalis,.planvs,.pictvs,
+    .accessories,.search{
+        align-items: center;
+        background-color: var(--shallow-yellow);
+        background-image: var(--crosses);
+        display: flex;
+        font-size: 18px;
+        height: 80vh;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
+    }
+    .search{
+        bottom: 10vh;
+        height: 60vh;
+        overflow-y: scroll;
+        position: sticky;
+        top: 30vh;
+    }
+    .pertinens{
+        height: 40vh;
+    }
+    .occidentalis div,.orientalis div,
+    .planvs div,.pictvs div,.accessories div{
+        place-items: center;
+        width: 90%;
+    }
+    .imagines-occidentali-pictae,
+    .imagines-orientali-pictae,
+    .statvae-marmorae-planae,
+    .statvae-marmorae-pictae,
+    .fvndamenta{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .imagines-occidentali-pictae img,
+    .imagines-orientali-pictae img,
+    .statvae-marmorae-planae img,
+    .statvae-marmorae-pictae img,
+    .fvndamenta img{
+        border: 2pt solid #ffffff;
+        border-radius: 10px;
+    }
+    .statvae-marmorae-planae img,
+    .statvae-marmorae-pictae img,
+    .fvndamenta img{
+        background-color: var(--deep-yellow);
+    }
+
+    .negotivm,.fvndatores,.missio-et-visio,
+    .retia-socialia,.pater-noster{
+        align-items: center;
+        background-color: var(--shallow-yellow);
+        background-image: var(--crosses);
+        display: flex;
+        font-size: 18px;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
+    }
+    .negotivm,.retia-socialia,.pater-noster{
+        height: 80vh;
+    }
+    .fvndatores{
+        height: 100vh;
+    }
+    .missio-et-visio{
+        height: 130vh;
+    }
+    .fvndatores div,.missio-et-visio div,
+    .retia-socialia div,.pater-noster div{
+        place-items: center;
+    }
+    .fvndatores div{
+        width: 90%;
+    }
+    .missio-et-visio div,.retia-socialia div{
+        width: 75%;
+    }
+    .pater-noster div{
+        width: 60%;
+    }
+    .fvndator{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .fvndator p{
+        text-align: justify;
+        width: 80%;
+    }
+    .fvndator img{
+        border: 2pt solid #ffffff;
+        border-radius: 50%;
+    }
+    .mission-vision{
+        background-color: var(--deep-yellow);
+        border: 2pt solid #000000;
+        border-radius: 25px;
+        box-shadow: 10px 10px 5px 0 var(--moderate-gray);
+        padding: 25px;
+        width: 75%;
+    }
+    .mission-vision p{
+        text-align: justify;
+    }
+
+    .tabvlata p{
+        text-align: justify;
+    }
+    .tabvlata button{
+        align-items: center;
+        background-color: var(--deep-yellow);
+        border: 2pt solid #000000;
+        border-radius: 10px;
+        display: flex;
+        font-family: var(--latin-font);
+        font-size: 18px;
+        font-weight: bold;
+        justify-content: space-evenly;
+        margin-block: 25px;
+        padding: 10px;
+        width: 80%;
+    }
+    .our-father{
+        background-color: var(--deep-yellow);
+        border: 2pt solid #000000;
+        border-radius: 25px;
+        box-shadow: 10px 10px 5px 0 var(--moderate-gray);
+        padding: 25px;
+        width: 75%;
+    }
+
+    .directvs{
+        background-color: var(--moderate-yellow);
+        display: flex;
+        font-size: 18px;
+        height: 90vh;
+        justify-content: center;
+        position: sticky;
+        width: 15%;
+    }    
+    .directvs div{
+        display: grid;
+        height: 60vh;
+        padding: 25px;
+        place-items: center;
+    }
+    .vsores,.prodvcta,.tabvla-moderaminis,.themata{
+        background-color: var(--shallow-yellow);
+        background-image: var(--crosses);
+        display: flex;
+        font-size: 18px;
+        height: 90vh;
+        justify-content: space-evenly;
+        left: 15%;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        width: 85%;
+    }
+    .themata{
+        overflow-y: visible;
+    }
+    .vsores>div,.prodvcta>div,.tabvla-moderaminis>div{
+        place-items: center;
+    }
+    .vsores>div{
+        width: 85%;
+    }
+    .prodvcta>div{
+        width: 75%;
+    }
+    .tabvla-moderaminis>div{
+        width: 65%;
+    }
+    .themata>div{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .clavis{
+        display: grid;
+        place-items: center;
+    }
+    .vsor,.ordo,.tabvla{
+        align-items: center;
+        background-color: var(--moderate-yellow);
+        border: 2pt solid #000000;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px 0 var(--moderate-gray);
+        display: flex;
+        justify-content: space-evenly;
+        margin-block: 25px;
+        padding: 10px;
+        width: 100%;
+    }
+    .tabvla{
+        background-color: var(--deep-yellow);
+        display: grid;
+        place-items: center;
+    }
+    .tabvla div{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .tabvla p{
+        margin-inline: 25px;
+    }
+    .vsor img,.ordo img{
+        border: 2pt solid #ffffff;
+        border-radius: 50%;
+    }
+    .ordo img{
+        background-color: var(--deep-yellow);
+        border-radius: 10px;
+    }
+    .vsor button{
+        background-color: var(--deep-yellow);
+        border: 2pt solid #000000;
+        border-radius: 10px;
+        font-family: var(--latin-font);
+        font-size: 18px;
+        font-weight: bold;
+        margin-block: 5px;
+        padding: 10px;
+        width: 25%;
+    }
+    
+    .colvm{
+        background-color: var(--moderate-yellow);
+        border: 2pt solid #000000;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px 0 var(--moderate-gray);
+        display: grid;
+        padding: 25px;
+        place-items: center;
+        width: 100%;
+    }
+    .colvm div{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .colvm select,.colvm button{
+        margin-block: 10px;
+    }
+    .colvm select,.particvlaria select,
+    .details select{
+        background-color: var(--deep-yellow);
+        border-radius: 10px;
+        font-family: var(--latin-font);
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        width: 25%;
+    }
+    .colvm button,.particvlaria button,
+    .orders button{
+        background-color: var(--deep-yellow);
+        border: 2pt solid #000000;
+        border-radius: 10px;
+        font-family: var(--latin-font);
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        width: 30%;
+    }
+    .orders button{
+        width: 15%;
+    }
+    .particvlaria button:last-of-type{
+        background-color: var(--shallow-yellow);
+    }
+    .impositvm,.pertinens{
+        align-items: start;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        font-size: 18px;
+        justify-content: start !important;
+        margin-block: 25px;
+        width: 100%;
+    }
+    .pertinens div{
+        margin-inline: 25px;
+    }
+    .impositvm div{
+        text-align: center;
+    }
+    .impositvm img,.fascicvlvs img,
+    .pertinens img,.imago-prodvcti img{
+        background-color: var(--deep-yellow);
+        border: 2pt solid #ffffff;
+        border-radius: 10px;
+    }
+    .imponere,#ordo{
+        align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        height: 100vh;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .imponere form,#ordo form{
+        animation: incrementvm-capessere 0.25s ease-in-out;
+        background-color: var(--moderate-yellow);
+        border-radius: 25px;
+        box-shadow: 10px 10px 5px 0 var(--moderate-gray);
+        display: grid;
+        font-size: 18px;
+        padding: 25px;
+        place-items: center;
+        text-align: center;
+        width: 75%;
+        z-index: 2;
+    }
+    .flex{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .fascicvlvs{
+        width: 25%;
+    }
+    .particvlaria,.details{
+        display: grid;
+        padding-inline: 25px;
+        place-items: center;
+        width: 75%;
+    }
+    .details{
+        width: 50%;
+    }
+    .particvlaria div,.details div{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .particvlaria input,.details input{
+        border-radius: 10px;
+        font-family: var(--latin-font);
+        font-size: 18px;
+        padding: 10px;
+    }
+    .particvlaria input,.particvlaria button,
+    .particvlaria select,.details input,
+    .details button,.details select{
+        margin-block: 10px;
+        width: 40%;
+    }
+    .details input,.details button,
+    .details select{
+        width: 50%;
+    }
+    .details select{
+        width: 80%;
+    }
+    #locvs{
+        width: 75%;
+    }
+
+    .informatio{
+        align-items: center;
+        background-color: var(--shallow-yellow);
+        background-image: var(--crosses);
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        width: 100%;
+    }
+    .informatio>div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        width: 80%;
+    }
+    .preview,.singvlaria,.descriptio{
+        width: 100%;
+    }
+    .singvlaria,.descriptio{
+        display: grid;
+        place-items: center;
+    }
+    .descriptio{
+        font-size: 18px;
+        text-align: center;
+    }
+    .preview img{
+        background-color: var(--deep-yellow);
+        border: 2pt solid #ffffff;
+        border-radius: 10px;
+    }
+    .singvlaria input,.singvlaria textarea{
+        border-radius: 10px;
+        font-family: var(--latin-font);
+        font-size: 18px;
+        padding: 10px;
+    }
+    .singvlvs,.dvplex,.singvlaria textarea{
+        margin-block: 10px;
+    }
+    .singvlvs,.singvlaria textarea{
+        width: 95%;
+    }
+    .singvlaria textarea{
+        resize: none;
+    }
+    .dvplex{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .dvplex input{
+        width: 100%;
+    }
+    .copia-prodvcti{
+        background-color: var(--deep-yellow);
+        border-radius: 10px;
+        font-family: var(--latin-font);
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        width: 100%;
+    }
+    .singvlaria button,.descriptio button{
+        background-color: var(--deep-yellow);
+        border: 2pt solid #000000;
+        border-radius: 10px;
+        font-family: var(--latin-font);
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        width: 50%;
+    }
+    .singvlaria button:last-of-type{
+        background-color: var(--moderate-yellow);
+    }
+
+    .insigne-prodvcti{
+        border: 2pt solid #ffffff;
+        border-radius: 50%;
+    }
+
+    #onvstvs{
+        align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    #onvstvs div{
+        width: 45px;
+        height: 45px;
+        border: 5px solid var(--deep-gray);
+        border-top-color: var(--deep-yellow);
+        border-radius: 50%;
+        animation: onvstvs 1s linear infinite;
+    }
+}
+
+@keyframes onvstvs{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes lvce-incedere{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes incrementvm-capessere{
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes labi-ad-sinistram{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+@keyframes labi-ad-dextram{
+    from{
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
