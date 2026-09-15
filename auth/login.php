@@ -75,7 +75,7 @@ require "../functions/login-func.php";
                 const loginSuccess=<?php echo $loginSuccess?'true':'false'; ?>;
 
                 if(loginSuccess){
-                    window.location.href='../customer/index.php';
+                    window.location.href='../main/index.php';
                 }
             }
 
