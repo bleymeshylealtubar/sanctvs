@@ -24,7 +24,7 @@ require "../functions/theme-func.php";
                     '../assets/others/modvs-beatvs.png':'../assets/others/modvs-sanctvs.png'; ?>"
                     width="100px" height="100px"
                 >
-                <a href="..admin/admin.php" title="Customers">CLIENTES</a>
+                <a href="../admin/admin.php" title="Customers">CLIENTES</a>
                 <a href="../admin/products.php" title="Products">PRODVCTA</a>
                 <a href="../admin/dashboard.php" title="Dashboard" style="text-align: center;">TABVLA MODERAMINIS</a>
                 <a href="../admin/themes.php" title="Themes">THEMATA</a>
