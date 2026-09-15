@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded',function(){
         event.preventDefault(); 
         event.stopPropagation();
 
-        window.location.href="./logout.php";
+        window.location.href="../auth/logout.php";
     }); 
     exire.addEventListener('click',function(event){
         if(event.target===exire){
